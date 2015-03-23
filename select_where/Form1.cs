@@ -18,10 +18,11 @@ namespace select_where
             var startList = new int[] {1, 2, 3, 5};
 
             var select = startList.Select(n => n*n);
-            var mySelect = startList.MySelect(n => n*n);
+            //var mySelect = startList.MySelect(n => n*n);
+            var mySelect = startList.MySelect(n => n.ToString()).ToList();
             
             var where = startList.Where(n => n < 4);
-            var myWhere = startList.MyWhere(n => n < 4);
+            var myWhere = startList.MyWhere(n => n < 4).ToList();
 
             InitializeComponent();
         }

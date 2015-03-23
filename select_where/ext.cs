@@ -8,7 +8,7 @@ namespace select_where
 {
     public static class ext
     {
-        public static IEnumerable<T> MySelect<T>(this IEnumerable<T> source, Func<T,T> func)
+        public static IEnumerable<V> MySelect<T, V>(this IEnumerable<T> source, Func<T, V> func)
         {
             foreach (var value in source)
             {
